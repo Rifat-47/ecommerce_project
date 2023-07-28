@@ -1,0 +1,149 @@
+.product-list-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-image {
+  min-width: 40%;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  min-height: 300px;
+  margin: 0 auto 10px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  color: #888;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  left: calc(50% - 20vw);
+  width: 40vw;
+  height: 40vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  top: calc(50% - 20vw);
+  margin: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  height: 40vw;
+  width: 40vw;
+  text-align: center;
+  overflow-y: scroll;
+  /* z-index: 1000;
+  position: fixed; */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 1.75rem;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.modal-to-cart,
+.item-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+}
+
+.modal-to-cart div {
+  margin: 1rem;
+  border: 3px solid rgb(95, 158, 160);
+  padding: 0 10px ;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.add-to-cart {
+  font: inherit;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: rgb(95, 158, 160);
+    border: 1px solid rgb(95, 158, 160);
+    width: 3rem;
+    text-align: center;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    /* margin-left: 1rem; */
+    margin: 0.25rem;
+}
+
+.add-to-cart:hover {
+  color: #fff;
+  background: rgb(95, 158, 160);
+}
+
+.blink {
+  animation: blink-animation 1s infinite;
+}
+
+.alert {
+  color: red;
+
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
